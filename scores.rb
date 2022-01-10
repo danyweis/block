@@ -12,3 +12,15 @@ puts scores.any? { |s| s < 70 }
 
 first_failing = scores.detect { |s| s < 70 }
 p first_failing
+
+scores_doubled = scores.map { |s| s * 2 } 
+p scores_doubled
+
+total = scores.reduce(:+)
+p total
+
+evens, odds = scores.partition { |s| s.even? }
+puts "\nEvens"
+p evens
+puts "\nOdds"
+p odds
